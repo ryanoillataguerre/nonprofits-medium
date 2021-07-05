@@ -1,16 +1,16 @@
-<mxfile host="app.diagrams.net" modified="2021-07-05T21:16:02.360Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="GMCamL2-wEHIlOseu_-8" version="14.8.4" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-05T21:16:52.875Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" etag="9_SN6O9zICSvfwpt1zUP" version="14.8.4" type="github">
   <diagram id="FX8YkvNvsNF3Q7GiBvTK" name="Page-1">
-    <mxGraphModel dx="946" dy="593" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1796" dy="593" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="CtwU71RQrNKwthgOh2QC-1" value="Next.js App&lt;br&gt;Typescript" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="CtwU71RQrNKwthgOh2QC-1" value="Next.js App&lt;br&gt;Typescript" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="360" y="80" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="CtwU71RQrNKwthgOh2QC-2" value="Data storage API&lt;br&gt;TypeScript" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="CtwU71RQrNKwthgOh2QC-2" value="Data storage API&lt;br&gt;TypeScript" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="240" y="480" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="CtwU71RQrNKwthgOh2QC-3" value="Math API&lt;br&gt;Rust" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="CtwU71RQrNKwthgOh2QC-3" value="Math API&lt;br&gt;Rust" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="480" y="480" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="CtwU71RQrNKwthgOh2QC-4" value="" style="endArrow=classic;startArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CtwU71RQrNKwthgOh2QC-2" target="CtwU71RQrNKwthgOh2QC-3">
@@ -31,10 +31,10 @@
             <mxPoint x="550" y="490" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CtwU71RQrNKwthgOh2QC-8" value="Plaid" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="50" y="710" width="120" height="60" as="geometry" />
+        <mxCell id="CtwU71RQrNKwthgOh2QC-8" value="Plaid" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="270" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="CtwU71RQrNKwthgOh2QC-10" value="" style="endArrow=classic;startArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=1;" edge="1" parent="1" source="CtwU71RQrNKwthgOh2QC-2" target="CtwU71RQrNKwthgOh2QC-8">
+        <mxCell id="CtwU71RQrNKwthgOh2QC-10" value="" style="endArrow=classic;startArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=1;" edge="1" parent="1" source="CtwU71RQrNKwthgOh2QC-2" target="CtwU71RQrNKwthgOh2QC-8">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="430" y="150" as="sourcePoint" />
             <mxPoint x="310" y="490" as="targetPoint" />
