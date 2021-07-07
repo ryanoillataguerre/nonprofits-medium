@@ -5,7 +5,6 @@ const app = () => {
   const app = express();
 
   app.use((_: Request, res: Response, next) => {
-
     res.header(
       'Access-Control-Allow-Headers',
       'Origin, X-Requested-With, Content-Type, Accept, Credentials, Set-Cookie',
