@@ -29,7 +29,7 @@ const app = () => {
   const server = http.createServer(app);
 
   server.on('listening', () => {
-    console.info(`Users service listening on port ${process.env.PORT}...`);
+    console.info(`Math service listening on port ${process.env.PORT}...`);
   });
 
   return server;
