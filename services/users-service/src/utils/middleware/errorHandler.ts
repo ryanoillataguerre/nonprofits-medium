@@ -1,4 +1,4 @@
-import { NextFunction, Request, Response } from "express";
+import { Request, Response } from "express";
 import { Error } from "@pfapp/errors/types";
 import { Logger } from "@pfapp/types/utils";
 import PrettyError from "pretty-error";
@@ -10,7 +10,7 @@ import {
 
 const pe = new PrettyError();
 export default (logger: Logger) =>
-	(error: Error, req: Request, res: Response, next: NextFunction) => {
+	(error: Error, req: Request, res: Response) => {
 		logger.error(`${req.method} - ${req.path}`);
 		logger.error(
 			process.env.NODE_ENV === "production" ? error : pe.render(error)
