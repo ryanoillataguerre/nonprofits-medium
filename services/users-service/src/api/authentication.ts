@@ -1,12 +1,16 @@
 import { Request, Response, NextFunction, Router } from "express";
+import { body } from "express-validator";
+import handleValidationErrors from "../utils/handleValidationErrors";
 
 const router: Router = Router();
 
 // API
 router.post(
 	"/signup",
+	[body("email").exists().isEmail(), body("password").exists()],
 	async (req: Request, res: Response, next: NextFunction) => {
 		try {
+			handleValidationErrors(req);
 			res.status(200).send({
 				success: true,
 			});

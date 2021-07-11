@@ -1,4 +1,5 @@
 import express, { Request, Response } from "express";
+import helmet from "helmet";
 import http from "http";
 
 import routes from "./api";
@@ -21,6 +22,7 @@ const server = () => {
 	});
 
 	app.use(express.json());
+	app.use(helmet());
 
 	// Routes
 	app.use("/", routes);
