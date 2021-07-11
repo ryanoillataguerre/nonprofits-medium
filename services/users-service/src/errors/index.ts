@@ -4,6 +4,7 @@ import InternalError from "./InternalError";
 import NotFoundError from "./NotFoundError";
 import UnauthorizedError from "./UnauthorizedError";
 import errorCodes from "./errorCodes";
+import * as types from "./types";
 
 export {
 	BadRequestError,
@@ -12,4 +13,5 @@ export {
 	NotFoundError,
 	UnauthorizedError,
 	errorCodes,
+	types,
 };

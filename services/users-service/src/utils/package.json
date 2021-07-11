@@ -1,5 +1,5 @@
 {
-  "name": "@pfapp/types",
+  "name": "@pfapp/utils",
   "main": "index.ts",
 	"version": "0.0.1"
 }
