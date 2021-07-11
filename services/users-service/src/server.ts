@@ -1,37 +1,39 @@
-import express, { Request, Response } from 'express';
-import http from 'http';
+import express, { Request, Response } from "express";
+import http from "http";
 
-const app = () => {
-  const app = express();
+import routes from "./api";
 
-  app.use((_: Request, res: Response, next) => {
-    res.header(
-      'Access-Control-Allow-Headers',
-      'Origin, X-Requested-With, Content-Type, Accept, Credentials, Set-Cookie',
-    );
-    res.header('Access-Control-Allow-Credentials', 'true');
-    res.header(
-      'Access-Control-Allow-Headers',
-      'Content-Type, Accept, Access-Control-Allow-Credentials, Cross-Origin',
-    );
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    next();
-  });
+const server = () => {
+	const app = express();
 
-  app.use(express.json());
+	app.use((_: Request, res: Response, next) => {
+		res.header(
+			"Access-Control-Allow-Headers",
+			"Origin, X-Requested-With, Content-Type, Accept, Credentials, Set-Cookie"
+		);
+		res.header("Access-Control-Allow-Credentials", "true");
+		res.header(
+			"Access-Control-Allow-Headers",
+			"Content-Type, Accept, Access-Control-Allow-Credentials, Cross-Origin"
+		);
+		res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+		next();
+	});
 
-  // Routes
-  app.get('/health', (_, res) => res.status(200).send({ success: true }));
-  // All non-specified routes return 404
-  app.get('*', (_, res) => res.status(404).send('Not Found'));
+	app.use(express.json());
 
-  const server = http.createServer(app);
+	// Routes
+	app.use("/", routes);
+	app.get("/health", (_, res) => res.status(200).send({ success: true }));
+	app.get("*", (_, res) => res.status(404).send("Not Found"));
 
-  server.on('listening', () => {
-    console.info(`Users service listening on port ${process.env.PORT}...`);
-  });
+	const httpServer = http.createServer(app);
 
-  return server;
+	httpServer.on("listening", () => {
+		console.info(`Users service listening on port ${process.env.PORT}...`);
+	});
+
+	return httpServer;
 };
 
-export default app;
+export default server;
