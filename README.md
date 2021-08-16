@@ -1,2 +1,3 @@
-# pfapp
-A personal finance application, documented in docs/ folder
+# Nonprofits
+
+A web app where you can donate to multiple nonprofits monthly.
