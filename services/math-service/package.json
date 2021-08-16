@@ -1,8 +1,8 @@
 {
-	"name": "math-service",
+	"name": "aglaea",
 	"version": "1.0.0",
 	"main": "index.js",
-	"repository": "https://github.com/ryanoillataguerre/pfapp/tree/master/services/math-service",
+	"repository": "https://github.com/ryanoillataguerre/nonprofits/tree/master/services/users-service",
 	"author": "Ryan Oillataguerre",
 	"license": "MIT",
 	"scripts": {
@@ -11,15 +11,22 @@
 		"dev": "nodemon --config nodemon.json src/index.ts"
 	},
 	"devDependencies": {
+		"@nonprofits/shared": "file:../shared/build",
 		"@types/express": "^4.17.13",
+		"@types/express-rate-limit": "^5.1.3",
 		"@types/node": "^16.0.0",
 		"dotenv": "^10.0.0",
 		"nodemon": "^2.0.7",
 		"ts-node": "^10.0.0",
-		"typescript": "^4.3.5",
-		"tslint": "^6.1.3"
+		"tslint": "^6.1.3",
+		"typescript": "^4.3.5"
 	},
 	"dependencies": {
-		"express": "^4.17.1"
+		"express": "^4.17.1",
+		"express-rate-limit": "^5.3.0",
+		"express-validator": "^6.12.0",
+		"helmet": "^4.6.0",
+		"pretty-error": "^3.0.4",
+		"winston": "^3.3.3"
 	}
 }

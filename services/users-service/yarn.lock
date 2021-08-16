@@ -23,6 +23,9 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
+"@nonprofits/shared@file:../shared/build":
+  version "0.0.0"
+
 "@dabh/diagnostics@^2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@dabh/diagnostics/-/diagnostics-2.0.2.tgz#290d08f7b381b8f94607dc8f471a12c675f9db31"
@@ -31,12 +34,6 @@
     colorspace "1.1.x"
     enabled "2.0.x"
     kuler "^2.0.0"
-
-"@pfapp/errors@file:src/errors":
-  version "0.0.1"
-
-"@pfapp/types@file:src/types":
-  version "0.0.1"
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
