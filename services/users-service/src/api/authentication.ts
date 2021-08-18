@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction, Router } from "express";
 import { body } from "express-validator";
-import handleValidationErrors from "../utils/handleValidationErrors";
+import { handleValidationErrors } from "@nonprofits/shared/utils";
 
 const router: Router = Router();
 

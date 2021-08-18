@@ -1,7 +1,7 @@
 import CustomError from "./CustomError";
 
 class BadRequestError extends CustomError {
-  constructor(message: string, code: Number, details: Object) {
+  constructor(message: string, code: Number = 400, details: Object) {
     super(message, code, details);
     this.name = "BadRequestError";
   }
