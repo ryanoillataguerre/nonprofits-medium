@@ -1,7 +1,7 @@
+import { errorHandler, logger } from "@utils";
 import express, { Request, Response } from "express";
 import helmet from "helmet";
 import http from "http";
-
 import routes from "./api";
 
 const server = () => {
@@ -28,11 +28,12 @@ const server = () => {
 	app.use("/", routes);
 	app.get("/health", (_, res) => res.status(200).send({ success: true }));
 	app.get("*", (_, res) => res.status(404).send("Not Found"));
+	app.use(errorHandler(logger));
 
 	const httpServer = http.createServer(app);
 
 	httpServer.on("listening", () => {
-		console.info(`Aglaea listening on port ${process.env.PORT}...`);
+		console.info(`users-service listening on port ${process.env.PORT}...`);
 	});
 
 	return httpServer;

@@ -22,7 +22,14 @@
     "lib": [
       "ES6",
       "DOM"
-    ]
+    ],
+    "baseUrl": ".",
+    "rootDir": ".",
+    "paths": {
+      "@utils": ["src/utils/index.ts"],
+      "@errors": ["src/errors/index.ts"],
+      "@nptypes": ["src/nptypes/index.ts"],
+    }
   },
   "include": [
     "src/**/*.ts"
