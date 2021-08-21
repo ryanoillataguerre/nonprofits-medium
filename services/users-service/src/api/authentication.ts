@@ -1,4 +1,3 @@
-import { BadRequestError } from "@errors";
 import { handleValidationErrors } from "@utils";
 import { Request, Response, NextFunction, Router } from "express";
 import { body } from "express-validator";
@@ -12,9 +11,6 @@ router.post(
 	async (req: Request, res: Response, next: NextFunction) => {
 		try {
 			handleValidationErrors(req);
-			throw new BadRequestError("Throwing a 404 error here", undefined, {
-				hello: "world",
-			});
 			res.status(200).send({
 				success: true,
 			});

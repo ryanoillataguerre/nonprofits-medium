@@ -1,10 +1,16 @@
 import { BadRequestError, UnauthorizedError, NotFoundError } from "@errors";
-import { Request, Response } from "express";
+import { NextFunction, Request, Response } from "express";
 import PrettyError from "pretty-error";
-import { Logger } from "@nptypes";
+import { logger } from "@utils";
 
 const pe = new PrettyError();
-export default (logger: Logger) => (error: any, req: Request, res: Response) => {
+const errorHandler = (
+	error: any,
+	req: Request,
+	res: Response,
+	_: NextFunction
+) => {
+	console.log("errorHandler", error);
 	logger.error(`${req.method} - ${req.path}`);
 	logger.error(
 		process.env.NODE_ENV === "production" ? error : pe.render(error)
@@ -42,3 +48,5 @@ export default (logger: Logger) => (error: any, req: Request, res: Response) => 
 		details,
 	});
 };
+
+export default errorHandler;
